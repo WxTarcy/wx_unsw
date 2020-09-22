@@ -21,7 +21,7 @@ add_executable(COMP9024_20T2
         Codes/inqueue.c
         Codes/inqueue.h
         #Codes/ass02.c
-        Codes/check.c)
+        Codes/check.c Codes/c.c)
 
 
 add_executable(COMP9024_20T22
