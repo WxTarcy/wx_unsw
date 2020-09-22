@@ -10,19 +10,18 @@ add_executable(COMP9024_20T2
         # Codes/class.c
         # Codes/lab01/binary.c
         # Codes/arrat_queue.h
-         Codes/QueueTester.c
+         #Codes/QueueTester.c
         #Codes/main.c
-        #Codes/pro3.c
+        Codes/pro3.c
         #Codes/proset3.c
-        Codes/pro4.c
-        Codes/instack.cpp
+        #Codes/pro4.c
         Codes/instack.h
         Codes/instack.c
         #Codes/proset5.c
         Codes/inqueue.c
-        Codes/inqueue.cpp Codes/inqueue.h
+        Codes/inqueue.h
         #Codes/ass02.c
-        )
+        Codes/check.c Codes/02.c)
 
 
 add_executable(COMP9024_20T22
