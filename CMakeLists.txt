@@ -23,7 +23,6 @@ add_executable(COMP9024_20T2
         #Codes/ass02.c
         )
 
-
 add_executable(COMP9024_20T22
         # Codes/test.c
         # Codes/class.c
@@ -32,3 +31,12 @@ add_executable(COMP9024_20T22
         # Codes/arrat_queue.c
         Codes/main.c
         Codes/ass0.c)
+
+add_executable(stackandlist
+        Codes/list.c
+        Codes/list.h
+        Codes/list_main.c
+        Codes/Stack.c
+        #Codes/stack_main.c
+        #Codes/house_main.c
+        )
