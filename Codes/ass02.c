@@ -1,7 +1,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "inqueue.h"
+#include "IntQueue.h"
 
 int main(void ){
     char value[10];

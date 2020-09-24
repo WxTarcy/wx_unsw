@@ -1,5 +1,5 @@
 
-#include "inqueue.h"
+#include "IntQueue.h"
 #include <assert.h>
 
 typedef struct {

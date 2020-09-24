@@ -12,14 +12,14 @@ add_executable(COMP9024_20T2
         # Codes/arrat_queue.h
          #Codes/QueueTester.c
         #Codes/main.c
-        Codes/pro3.c
+        #Codes/pro3.c
         #Codes/proset3.c
         #Codes/pro4.c
         Codes/instack.h
         Codes/instack.c
-        #Codes/proset5.c
-        Codes/inqueue.c
-        Codes/inqueue.h
+        Codes/proset5.c
+        Codes/IntQueue.c
+        Codes/IntQueue.h
         #Codes/ass02.c
         )
 
