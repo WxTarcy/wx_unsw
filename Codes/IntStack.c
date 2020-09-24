@@ -3,7 +3,7 @@
 //
 
 
-#include "instack.h"
+#include "IntStack.h"
 #include <assert.h>
 
 typedef struct {

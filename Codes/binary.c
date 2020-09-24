@@ -1,7 +1,7 @@
 // Integer Stack ADO tester ... COMP9024 20T2
 #include <stdio.h>
 #include <stdlib.h>
-#include "instack.h"
+#include "IntStack.h"
 
 //int main(void) {
 //    int i, n;
