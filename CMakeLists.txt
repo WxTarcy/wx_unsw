@@ -21,7 +21,7 @@ add_executable(COMP9024_20T2
         Codes/IntQueue.c
         Codes/IntQueue.h
         #Codes/ass02.c
-        )
+        Codes/palindrome.c)
 
 add_executable(COMP9024_20T22
         # Codes/test.c
