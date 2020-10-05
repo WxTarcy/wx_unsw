@@ -21,9 +21,11 @@ for i in range(3331,3346):
         time_recive=datetime.now()
         rtt=round((time_recive-time_send).total_seconds()*1000)
         rtts.append(rtt)
+        print(f'{i} PING to {serverip}, seq={i}, rtt={rtt} ms')
+        client_socket.settimeout(None)
     except timeout:
         lostpackets=lostpackets+1
-        print(f'{i} PING to {serverip}, seq={i}, rtt=timeout')
+        print(f'{i} PING to {serverip}, seq={i}, rtt= time out')
 
 print('\n')
 print(f'Minimum RTT= {min(rtts)} ms')
