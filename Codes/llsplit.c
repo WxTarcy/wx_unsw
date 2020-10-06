@@ -84,6 +84,10 @@ void showLL(LinkedList ll) {
 void showhalf(LinkedList ll){
     assert(ll != NULL);
     LinkedNode p = ll->first;
+    if (ll->allnumber==1){
+        printf("\n");
+        printf("First part is %d",p->value);
+    }
     if (p != NULL) {
         printf("\n");
         printf("First part is ");
