@@ -69,7 +69,7 @@ void showLL(LinkedList ll) {
     if (p != NULL) {
         printf("List is ");
     }
-    for(p->value;p->next!=NULL;p=p->next){
+    for(LinkedNode p;p->next!=NULL;p=p->next){
         printf("%d-->",p->value);
     }
     printf("%d",p->value);
