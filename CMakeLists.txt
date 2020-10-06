@@ -29,8 +29,8 @@ add_executable(COMP9024_20T22
         # Codes/lab01/binary.c
         # Codes/arrat_queue.h
         # Codes/arrat_queue.c
-        Codes/main.c
-        )
+        #Codes/main.c
+        Codes/llcreate.c)
 
 add_executable(stackandlist
         Codes/list.c
@@ -39,4 +39,4 @@ add_executable(stackandlist
         Codes/Stack.c
         #Codes/stack_main.c
         #Codes/house_main.c
-        )
+        Codes/llcreate.c)
