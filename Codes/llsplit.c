@@ -1,3 +1,4 @@
+
 //
 // Created by 武轩 on 6/10/20.
 //
@@ -77,45 +78,45 @@ void showLL(LinkedList ll) {
     }
 }
 
-//void showhalf(LinkedList ll){
-//    assert(ll != NULL);
-//    LinkedNode p = ll->first;
-//    if (p != NULL) {
-//        printf("\n");
-//        printf("First part is ");
-//        int c=0;
-//        if (ll->allnumber%2==0){
-//            for (LinkedNode i = p; c<ll->allnumber/2-1; i = i->next) {
-//                printf("%d-->", i->value);
-//                p = i;
-//                c++;
-//            }
-//            printf("%d",p->next->value);
-//            printf("\n");
-//            printf("Second part is ");
-//            for(LinkedNode y = p->next->next; y->next != NULL; y = y->next) {
-//                printf("%d-->", y->value);
-//                p = y;
-//            }
-//            printf("%d", p->next->value);
-//        } else{
-//            for (LinkedNode i = p; c<ll->allnumber/2; i = i->next) {
-//                printf("%d-->", i->value);
-//                p = i;
-//                c++;
-//            }
-//            printf("%d",p->next->value);
-//            printf("\n");
-//            printf("Second part is ");
-//            for(LinkedNode y = p->next->next; y->next != NULL; y = y->next) {
-//                printf("%d-->", y->value);
-//                p = y;
-//            }
-//            printf("%d", p->next->value);
-//        }
-//
-//    }
-//}
+void showhalf(LinkedList ll){
+    assert(ll != NULL);
+    LinkedNode p = ll->first;
+    if (p != NULL) {
+        printf("\n");
+        printf("First part is ");
+        int c=0;
+        if (ll->allnumber%2==0){
+            for (LinkedNode i = p; c<ll->allnumber/2-1; i = i->next) {
+                printf("%d-->", i->value);
+                p = i;
+                c++;
+            }
+            printf("%d",p->next->value);
+            printf("\n");
+            printf("Second part is ");
+            for(LinkedNode y = p->next->next; y->next != NULL; y = y->next) {
+                printf("%d-->", y->value);
+                p = y;
+            }
+            printf("%d", p->next->value);
+        } else{
+            for (LinkedNode i = p; c<ll->allnumber/2; i = i->next) {
+                printf("%d-->", i->value);
+                p = i;
+                c++;
+            }
+            printf("%d",p->next->value);
+            printf("\n");
+            printf("Second part is ");
+            for(LinkedNode y = p->next->next; y->next != NULL; y = y->next) {
+                printf("%d-->", y->value);
+                p = y;
+            }
+            printf("%d", p->next->value);
+        }
+
+    }
+}
 
 
 int  main(){
@@ -132,7 +133,7 @@ int  main(){
         }
     }
     showLL(LL);
-//    showhalf(LL);
+    showhalf(LL);
     freeLL(LL);
     return 0;
 
