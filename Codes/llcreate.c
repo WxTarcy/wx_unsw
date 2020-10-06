@@ -73,7 +73,7 @@ void showLL(LinkedList ll) {
         printf("%d-->",i->value);
         p=i;
     }
-    printf("%d",p->value);
+    printf("%d",p->next->value);
 
 }
 int  main(){
