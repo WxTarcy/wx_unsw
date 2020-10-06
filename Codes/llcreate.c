@@ -68,13 +68,13 @@ void showLL(LinkedList ll) {
     printf("Done. ");
     if (p != NULL) {
         printf("List is ");
-    }
-    for(LinkedNode i=p;i->next!=NULL;i=i->next){
-        printf("%d-->",i->value);
-        p=i;
-    }
-    printf("%d",p->next->value);
 
+        for (LinkedNode i = p; i->next != NULL; i = i->next) {
+            printf("%d-->", i->value);
+            p = i;
+        }
+        printf("%d", p->next->value);
+    }
 }
 int  main(){
     LinkedList LL=CreatedList();
