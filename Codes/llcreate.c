@@ -71,7 +71,7 @@ void showLL(LinkedList ll) {
     }
     for(LinkedNode i=p->value;i->next!=NULL;i=i->next){
         printf("%d-->",i->value);
-        p=i
+        p=i->value;
     }
     printf("%d",p->value);
 
