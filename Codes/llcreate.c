@@ -8,7 +8,7 @@
 
 typedef struct Node *LinkedNode;
 
-typedef struct Node {
+struct Node {
     int value;
     LinkedNode next;
 };
@@ -70,9 +70,9 @@ void showLL(LinkedList ll) {
         printf("List is ");
     }
     for(p;p->next!=NULL;p=p->next){
-        printf("%d-->",*p);
+        printf("%d-->",p->value);
     }
-    printf("%d",*p);
+    printf("%d",p->value);
 
 }
 int  main(){
