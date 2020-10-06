@@ -87,9 +87,13 @@ void showhalf(LinkedList ll){
     if (ll->allnumber==1){
         printf("\n");
         printf("First part is %d",p->value);
+    }else if(ll->allnumber==2){
         printf("\n");
-        printf("Second part is ");
-    } else {
+        printf("First part is %d",p->value);
+        printf("\n");
+        printf("Second part is %d",p->next->value);
+
+    }else {
 
         if (p != NULL) {
             printf("\n");
