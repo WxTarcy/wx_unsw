@@ -122,8 +122,8 @@ void showhalf(LinkedList ll){
                 printf("%d", p->next->value);
                 printf("\n");
                 printf("Second part is ");
-                LinkedNode c=p->next;
-                for (LinkedNode y = c->next; y->next != NULL; y = y->next) {
+                LinkedNode alter=p->next;
+                for (LinkedNode y = alter->next; y->next != NULL; y = y->next) {
                     printf("%d-->", y->value);
                     p = y;
                 }
