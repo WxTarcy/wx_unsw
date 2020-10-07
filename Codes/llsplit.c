@@ -7,20 +7,20 @@
 #include <stdlib.h>
 #include <assert.h>
 
-typedef struct Node *LinkedNode;
 
-struct Node {
+
+typedef struct Node {
     int value;
-    LinkedNode next;
-};
+    struct Node *next;
+} *LinkedNode;
 
-typedef struct List *LinkedList;
 
-struct List {
+typedef struct List {
     LinkedNode first;
     LinkedNode last;
+    LinkedNode final;
     int allnumber;
-};
+}*LinkedList;
 
 LinkedNode CreatedNode(int v){
     LinkedNode new = malloc(sizeof(struct Node));
@@ -33,6 +33,7 @@ LinkedList CreatedList(){
     LinkedList new = malloc(sizeof(struct List));
     new->first = NULL;
     new->last = NULL;
+    new->final=NULL;
     new->allnumber = 0;
     return new;
 }
@@ -48,6 +49,7 @@ void joinLL(LinkedList LL, int data) {
         LL->last->next = new;
         LL->last = new;
         LL->allnumber++;
+        LL->final=new;
     }
 }
 
@@ -92,9 +94,7 @@ void showhalf(LinkedList ll){
         printf("First part is %d",p->value);
         printf("\n");
         printf("Second part is %d",p->next->value);
-
     }else {
-
         if (p != NULL) {
             printf("\n");
             printf("First part is ");
@@ -122,11 +122,12 @@ void showhalf(LinkedList ll){
                 printf("%d", p->next->value);
                 printf("\n");
                 printf("Second part is ");
-                for (LinkedNode y = p->next->next; y->next != NULL; y = y->next) {
+                LinkedNode c=p->next;
+                for (LinkedNode y = c->next; y->next != NULL; y = y->next) {
                     printf("%d-->", y->value);
                     p = y;
                 }
-                printf("%d", p->next->value);
+                printf("%d", ll->final->value);
             }
 
         }
