@@ -23,19 +23,18 @@ typedef struct List {
 }*LinkedList;
 
 LinkedNode CreatedNode(int v){
-    LinkedNode new = malloc(sizeof(struct Node));
-    new->value = v;
-    new->next = NULL;
-    return new;
+    LinkedNode node = malloc(sizeof(struct Node));
+    node->value = v;
+    node->next = NULL;
+    return node;
 }
 
 LinkedList CreatedList(){
-    LinkedList new = malloc(sizeof(struct List));
-    new->first = NULL;
-    new->last = NULL;
-    new->final=NULL;
-    new->allnumber = 0;
-    return new;
+    LinkedList LL = malloc(sizeof(struct List));
+    LL->first = NULL;
+    LL->last = NULL;
+    LL->allnumber = 0;
+    return LL;
 }
 
 void joinLL(LinkedList LL, int data) {
@@ -55,11 +54,11 @@ void joinLL(LinkedList LL, int data) {
 
 void freeLL(LinkedList ll) {
     assert(ll != NULL);
-    LinkedNode temp = ll->first;
-    while(temp!=NULL) {
-        LinkedNode next = temp->next;
-        free(temp);
-        temp = next;
+    LinkedNode p = ll->first;
+    while(p!=NULL) {
+        LinkedNode next = p->next;
+        free(p);
+        p = next;
     }
     free(ll);
 }
