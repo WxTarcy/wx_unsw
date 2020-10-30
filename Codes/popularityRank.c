@@ -72,8 +72,7 @@ int main(){
             }
         }
         //show the ranking
-        printf("\n");
-        printf("Popularity ranking:\n");
+        printf("\nPopularity ranking:\n");
         float result[a];
         for(int i=0;i<a;i++){
             if (count_out[i]<0.9){
