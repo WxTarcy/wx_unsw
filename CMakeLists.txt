@@ -12,7 +12,7 @@ add_executable(COMP9024_20T2
         # Codes/arrat_queue.h
          #Codes/QueueTester.c
         #Codes/main.c
-        Codes/pro3.c
+        #Codes/pro3.c
         #Codes/proset3.c
         #Codes/pro4.c
 #        Codes/IntStack.h
@@ -21,7 +21,8 @@ add_executable(COMP9024_20T2
 #        Codes/IntQueue.c
 #        Codes/IntQueue.h
         #Codes/ass02.c
-        Codes/palindrome.c)
+        #Codes/palindrome.c
+        Codes/midterm.c)
 
 add_executable(COMP9024_20T22
         # Codes/test.c
@@ -35,10 +36,16 @@ add_executable(COMP9024_20T22
         )
 
 add_executable(stackandlist
-        Codes/list.c
-        Codes/list.h
-        Codes/list_main.c
-        Codes/Stack.c
+        #Codes/list.c
+        #Codes/list.h
+        #Codes/list_main.c
+        #Codes/Stack.c
         #Codes/stack_main.c
         #Codes/house_main.c
-        Codes/llcreate.c Codes/llsplit.c)
+        #Codes/llcreate.c
+        #Codes/llsplit.c
+        Codes/popularityRank.c
+        Codes/WGraph.c
+        Codes/WGraph.h
+        #Codes/midterm.c
+        )
