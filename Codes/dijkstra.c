@@ -23,7 +23,6 @@ void dijkstraSSSP(Graph g, Vertex source) {
     int  pred[MAX_NODES];
     bool vSet[MAX_NODES];  // vSet[v] = true <=> v has not been processed
     int s;
-
     PQueueInit();
     int nV = numOfVertices(g);
     for (s = 0; s < nV; s++) {
