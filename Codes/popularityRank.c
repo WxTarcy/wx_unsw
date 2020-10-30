@@ -20,8 +20,6 @@ void insertionSort(int array[], int n,int array_two[]) {
     }
 }
 
-
-
 int main(){
     //make a graph
     int a;
