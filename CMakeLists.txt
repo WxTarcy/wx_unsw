@@ -44,8 +44,11 @@ add_executable(stackandlist
         #Codes/house_main.c
         #Codes/llcreate.c
         #Codes/llsplit.c
-        Codes/popularityRank.c
+        #Codes/popularityRank.c
         Codes/WGraph.c
         Codes/WGraph.h
         #Codes/midterm.c
+        Codes/PQueue.h
+        Codes/PQueue.c
+        Codes/dijkstra.c
         )

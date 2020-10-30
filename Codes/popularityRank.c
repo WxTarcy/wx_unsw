@@ -50,13 +50,13 @@ int main(){
         }
 
         for (int c=1;c<=a*a;c++) {
-            printf("Enter an edge (from):");
+            printf("Enter an edge (from): ");
             test_one = scanf("%d", &newvers_one);
             if (test_one == 0) {
                 printf("Done.");
                 break;
             } else {
-                printf("Enter an edge (to):");
+                printf("Enter an edge (to): ");
                 test_two = scanf("%d", &newvers_two);
                 if (test_two == 1) {
                     count_out[newvers_one]++;
