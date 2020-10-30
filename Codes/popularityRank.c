@@ -30,7 +30,7 @@ int main(){
     if(b==1){
         g=newGraph(a);
     }else{
-        printf("Done.");
+        printf("Done.\n");
     }
 
     if(b==1){
@@ -53,7 +53,7 @@ int main(){
             printf("Enter an edge (from): ");
             test_one = scanf("%d", &newvers_one);
             if (test_one == 0) {
-                printf("Done.");
+                printf("Done.\n");
                 break;
             } else {
                 printf("Enter an edge (to): ");
@@ -66,13 +66,13 @@ int main(){
                     e.weight=1;
                     insertEdge(g,e);
                 } else {
-                    printf("Done.");
+                    printf("Done.\n");
                     break;
                 }
             }
         }
         //show the ranking
-        printf("\nPopularity ranking:\n");
+        printf("Popularity ranking:\n");
         float result[a];
         for(int i=0;i<a;i++){
             if (count_out[i]<0.9){
