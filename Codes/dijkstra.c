@@ -51,8 +51,6 @@ void dijkstraSSSP(Graph g, Vertex source) {
     for(int p=0;p<nV;p++){
         if (dist[p]<VERY_HIGH_VALUE){
             printf("%d: distance = %d, shortest path: ",p,dist[p]);
-            int w=p;
-            int list[nV];
             if(p==source){
                 printf("%d",source);
             } else{
