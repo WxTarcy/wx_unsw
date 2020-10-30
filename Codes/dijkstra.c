@@ -45,6 +45,7 @@ void dijkstraSSSP(Graph g, Vertex source) {
                 pred[t] = leave_point;
             }
         }
+
         vSet[leave_point] = false;
     }
 
