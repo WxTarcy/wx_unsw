@@ -4,10 +4,10 @@
 #include <stdio.h>
 
 
-void insertionSort(int array[], int n,int array_two[]) {
+void insertionSort(float array[], int n,int array_two[]) {
     int i;
     for (i = 1; i < n; i++) {
-        int element = array[i];// for this element ...
+        float element = array[i];// for this element ...
         int num=array_two[i];
         int j = i-1;
         while (j >= 0 && array[j] < element) {  // ... work down the ordered list
@@ -83,8 +83,9 @@ int main(){
             }
         }
         insertionSort(result,a,fin);
-        for (int i = 0; i < a; i++)
+        for (int i = 0; i < a; i++){
             printf("%d %.1f\n",fin[i], result[i]);
+        }
         freeGraph(g);
     }
     return 0;
