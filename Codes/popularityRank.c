@@ -72,6 +72,7 @@ int main(){
             }
         }
         //show the ranking
+        printf("\n");
         printf("Popularity ranking:\n");
         float result[a];
         for(int i=0;i<a;i++){
