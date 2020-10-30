@@ -39,7 +39,7 @@ void dijkstraSSSP(Graph g, Vertex source) {
         int leave_point = leavePQueue(dist);
         for (int t = 0; t < nV; t++) {
             int weight = adjacent(g, leave_point, t);
-            if (weight > 0 && dist[leave_point] + weight < dist[t]) {
+            if (weight > 0&& vSet[t] && dist[leave_point] + weight < dist[t]) {
                 dist[t] = dist[leave_point] + weight;
                 pred[t] = leave_point;
             }
