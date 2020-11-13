@@ -234,7 +234,7 @@ Tree partition(Tree t, int i){
     if(t==NULL){
         return t;
     }
-    if (i>TreeNumNodes(t)){
+    if (i>TreeNumNodes(t)||i<0){
         return t;
     }
     int m=TreeNumNodes(left(t));
