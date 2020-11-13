@@ -32,7 +32,11 @@ add_executable(COMP9024_20T22
         # Codes/arrat_queue.c
         #Codes/main.c
         #Codes/llcreate.c
-        Codes/llsplit.c
+        #Codes/llsplit.c
+        Codes/BST.c
+        Codes/BST.h
+        Codes/queue.c
+        Codes/queue.h
         )
 
 add_executable(stackandlist
