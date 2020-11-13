@@ -235,7 +235,7 @@ Tree partition(Tree t, int i){
     if(m>i){
         left(t) = partition(left(t), i);
         t = rotateRight(t);
-    } else if (0<m<i){
+    } else if (m<i || m>0){
         right(t) = partition(right(t), i - m -1);
         t = rotateLeft(t);
     }
