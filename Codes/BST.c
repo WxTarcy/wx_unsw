@@ -231,11 +231,14 @@ Tree insertSplay(Tree t, Item it) {
 }
 
 Tree partition(Tree t, int i){
+    if(t==NULL){
+        return t;
+    }
     int m=TreeNumNodes(left(t));
     if(m>i){
         left(t) = partition(left(t), i);
         t = rotateRight(t);
-    } else if (m<i || m>=0){
+    } else if (m<i || m>0){
         right(t) = partition(right(t), i - m -1);
         t = rotateLeft(t);
     }
