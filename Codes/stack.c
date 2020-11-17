@@ -1,7 +1,7 @@
 //
 // Created by Rui Mu on 22/9/20.
 //
-#include "Stack.h"
+#include "stack.h"
 #include <stdlib.h>
 #include <assert.h>
 #include <stdio.h>
