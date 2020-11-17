@@ -1,5 +1,5 @@
 // Weighted Directed Graph ADT
-// Adjacency Matrix Representation ... COMP9024 20T3
+// Adjacency Matrix Representation ... COMP9024 19T3
 #include "WGraph.h"
 #include <assert.h>
 #include <stdlib.h>
@@ -87,4 +87,3 @@ void freeGraph(Graph g) {
     free(g->edges);
     free(g);
 }
-

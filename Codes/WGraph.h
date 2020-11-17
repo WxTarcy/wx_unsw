@@ -1,6 +1,4 @@
-
-
-// Weighted Graph ADT interface ... COMP9024 20T3
+// Weighted Graph ADT interface ... COMP9024 19T3
 
 typedef struct GraphRep *Graph;
 
