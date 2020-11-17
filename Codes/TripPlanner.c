@@ -136,7 +136,7 @@ int main() {
     //second part
     int num_buses;
     int num_stops;
-    printf("Enter the number of buses: ");
+    printf("Enter the number of buses:");
     // 0    5
     // 1
     // 1    2
@@ -148,7 +148,7 @@ int main() {
     int index = 0;
     int totalStops = 0;
     for (int busIndex = 0; busIndex < num_buses; busIndex++) {
-        printf("Enter the number of stops: ");
+        printf("Enter the number of stops:");
         scanf("%d", &num_stops);
         // 总共有多少站
         totalStops +=num_stops;
