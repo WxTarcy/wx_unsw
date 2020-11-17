@@ -188,7 +188,7 @@ int main() {
         printf("From: ");
         scanf("%s",From);
         if(strcmp(From,"done")==0){
-            printf("thank you for using TripPlanner");
+            printf("Thank you for using TripPlanner.");
             break;
         }
         printf("To: ");
@@ -233,7 +233,7 @@ int main() {
             }
         }
         if (useTime==999999){
-            printf("No connection found\n");
+            printf("No connection found.\n");
         } else{
             dijkstraSSSPs(lines,finalfrom,schedules,finalto,schedules[finalto]->busIndex);
         }
