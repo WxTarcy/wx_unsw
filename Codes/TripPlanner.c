@@ -136,7 +136,7 @@ int main() {
     //second part
     int num_buses;
     int num_stops;
-    printf("Enter the number of buses: ");
+    printf("Enter the number of busses: ");
     // 0    5
     // 1
     // 1    2
