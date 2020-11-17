@@ -47,7 +47,6 @@ void print_track(int a[],int b,Schedule *schedules,int BusNo){
 
 int dijkstraSSSP(Graph g, int source,Vertex end) {
     int  dist[MAX_NODES];
-    int  pred[MAX_NODES];
     bool vSet[MAX_NODES];  // vSet[v] = true <=> v has not been processed
     int s;
     PQueueInit();
@@ -55,7 +54,6 @@ int dijkstraSSSP(Graph g, int source,Vertex end) {
     for (s = 0; s < nV; s++) {
         joinPQueue(s);
         dist[s] = VERY_HIGH_VALUE;
-        pred[s] = -1;
         vSet[s] = true;
     }
     dist[source] = 0;
@@ -67,7 +65,6 @@ int dijkstraSSSP(Graph g, int source,Vertex end) {
             int weight = adjacent(g, leave_point, t);
             if (weight > 0&& vSet[t] && dist[leave_point] + weight < dist[t]) {
                 dist[t] = dist[leave_point] + weight;
-                pred[t] = leave_point;
             }
         }
 
