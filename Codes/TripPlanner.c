@@ -103,7 +103,6 @@ void dijkstraSSSPs(Graph g, int source,Schedule *schedules,Vertex end,int busNO)
         vSet[leave_point] = false;
     }
     print_track(pred,end,schedules,busNO);
-    printf("\n");
 
 }
 ////输出结果
