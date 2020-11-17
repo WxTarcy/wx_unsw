@@ -232,7 +232,7 @@ int main() {
             }
         }
         if (useTime==999999){
-            printf("No connection found.\n");
+            printf("No connection found.");
         } else{
             dijkstraSSSPs(lines,finalfrom,schedules,finalto,schedules[finalto]->busIndex);
         }
