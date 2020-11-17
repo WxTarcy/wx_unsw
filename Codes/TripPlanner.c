@@ -40,7 +40,7 @@ void print_track(int a[],int b,Schedule *schedules,int BusName){
     }
     if (s!=BusName){
         printf("%s %s\n",schedules[b]->time,schedules[b]->name);
-        printf(" Change at %s\n",schedules[b]->name);
+        printf("Change at %s\n",schedules[b]->name);
     } else{
         printf("%s %s\n",schedules[b]->time,schedules[b]->name);
     }
