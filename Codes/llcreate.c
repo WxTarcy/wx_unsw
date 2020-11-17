@@ -5,19 +5,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
-
+#include "list.h"
 
 typedef struct Node {
     int value;
     struct Node *next;
-} *LinkedNode;
+} ;
 
 
 typedef struct List {
     LinkedNode first;
     LinkedNode last;
     int allnumber;
-}*LinkedList;
+};
 
 LinkedNode CreatedNode(int v){
     LinkedNode node = malloc(sizeof(struct Node));
