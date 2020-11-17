@@ -50,6 +50,7 @@ Vertex leavePQueue(int priority[]) {
     return bestVertex;
 }
 
+
 // check if priority queue PQueue is empty
 bool PQueueIsEmpty() {
     return (PQueue.length == 0);
