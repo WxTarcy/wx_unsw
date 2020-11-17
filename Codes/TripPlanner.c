@@ -33,8 +33,8 @@ Schedule createSchedule(int busIndex){
 
 void print_track(int a[],int b,Schedule *schedules,int BusName){
     int s=0;
+    s=BusName;
     if(a[b]!=-1){
-        s=BusName;
         BusName=schedules[b]->busIndex;
         print_track(a,a[b],schedules,BusName);
     }
