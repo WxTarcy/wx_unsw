@@ -159,9 +159,9 @@ int main() {
             index++;
         }
     }
-    for(index = 0; index < totalStops;index ++) {
-        printf("%s,%s,%d,%d\n", schedules[index]->name, schedules[index]->time, schedules[index]->busIndex,schedules[index]->intTime);
-    }
+//    for(index = 0; index < totalStops;index ++) {
+//        printf("%s,%s,%d,%d\n", schedules[index]->name, schedules[index]->time, schedules[index]->busIndex,schedules[index]->intTime);
+//    }
     Graph lines=newGraph(totalStops);
     for (int i = 0; i < totalStops; ++i) {
         if (i!=totalStops-1&&schedules[i]->busIndex==schedules[i+1]->busIndex){
