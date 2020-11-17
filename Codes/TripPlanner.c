@@ -3,7 +3,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
-#include "PQueue.h"
+#include "queue.h"
+
 #define  STOP_NAME 32
 #define  TIME 5
 
