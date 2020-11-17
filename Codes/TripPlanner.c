@@ -20,15 +20,14 @@ typedef struct schedule {
 } * Schedule;
 
 Schedule createSchedule(int busIndex){
-    char hour[3];
     Schedule newSchedule = malloc(sizeof(struct schedule));
     newSchedule->time = malloc(sizeof(char) * STOP_NAME);
     scanf("%s", newSchedule->time);
     newSchedule->name = malloc(sizeof(char) * TIME);
     scanf("%s", newSchedule->name);
     newSchedule->busIndex = busIndex;
-    strlcpy(hour,newSchedule->time,3);
-    newSchedule->intTime=atoi(hour)*60+atoi(newSchedule->time+2);
+    int hour=atoi(newSchedule->time)/100;
+    newSchedule->intTime=hour*60+atoi(newSchedule->time+2);
     return newSchedule;
 }
 
@@ -199,9 +198,8 @@ int main() {
         scanf("%s",To);
         printf("Arrive by: ");
         scanf("%s",arrive_time);
-        char hour[3];
-        strlcpy(hour,arrive_time,3);
-        int intFinalTime=atoi(hour)*60+atoi(arrive_time+2);
+        int hour=atoi(arrive_time)/100;
+        int intFinalTime=hour*60+atoi(arrive_time+2);
         int count=0;
         int FromNum[totalStops];
         for (int i = 0; i < totalStops; ++i) {
