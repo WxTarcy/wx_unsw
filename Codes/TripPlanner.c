@@ -21,9 +21,9 @@ typedef struct schedule {
 
 Schedule createSchedule(int busIndex){
     Schedule newSchedule = malloc(sizeof(struct schedule));
-    newSchedule->time = malloc(sizeof(char) * STOP_NAME);
+    newSchedule->time = malloc(sizeof(char) * TIME);
     scanf("%s", newSchedule->time);
-    newSchedule->name = malloc(sizeof(char) * TIME);
+    newSchedule->name = malloc(sizeof(char) * STOP_NAME);
     scanf("%s", newSchedule->name);
     newSchedule->busIndex = busIndex;
     int hour=atoi(newSchedule->time)/100;
