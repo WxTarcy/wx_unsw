@@ -31,14 +31,16 @@ Schedule createSchedule(int busIndex){
     return newSchedule;
 }
 
-void print_track(int a[],int b,Schedule *schedules,int BusNo){
+void print_track(int a[],int b,Schedule *schedules,int BusName){
+    int s=0;
     if(a[b]!=-1){
-        BusNo=schedules[b]->busIndex;
-        print_track(a,a[b],schedules,BusNo);
+        s=BusName;
+        BusName=schedules[b]->busIndex;
+        print_track(a,a[b],schedules,BusName);
     }
-    if (BusNo!=schedules[b]->busIndex){
-        printf("\n%s %s",schedules[b]->time,schedules[b]->name);
-        printf(" Change at %s",schedules[b]->name);
+    if (s!=BusName){
+        printf("%s %s",schedules[b]->time,schedules[b]->name);
+        printf(" Change at %s\n",schedules[b]->name);
     } else{
         printf("%s %s\n",schedules[b]->time,schedules[b]->name);
     }
@@ -105,14 +107,6 @@ void dijkstraSSSPs(Graph g, int source,Schedule *schedules,Vertex end,int busNO)
     print_track(pred,end,schedules,busNO);
 
 }
-////输出结果
-//    if (dist[end]<VERY_HIGH_VALUE&&time>=schedules[end]->intTime){
-//        print_track(pred,end,schedules);
-//    } else{
-//        printf("No connection found");
-//        printf("\n");
-//    }
-
 
 
 
