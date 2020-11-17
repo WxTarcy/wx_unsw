@@ -182,12 +182,13 @@ int main() {
             }
         }
     }
+
     char From[STOP_NAME],To[STOP_NAME],arrive_time[TIME];
     while (1){
         printf("From: ");
         scanf("%s",From);
         if(strcmp(From,"done")==0){
-            printf("Thank you for using TripPlanner.");
+            printf("Thank you for using TripPlanner.\n");
             break;
         }
         printf("To: ");
@@ -232,7 +233,7 @@ int main() {
             }
         }
         if (useTime==999999){
-            printf("No connection found.");
+            printf("No connection found.\n");
         } else{
             dijkstraSSSPs(lines,finalfrom,schedules,finalto,schedules[finalto]->busIndex);
         }
