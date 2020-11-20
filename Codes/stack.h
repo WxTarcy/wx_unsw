@@ -1,36 +1,9 @@
-//
-// Created by Rui Mu on 22/9/20.
-//
-#include <stdbool.h>
-#define MAX 100
+// Stack ADT header file ... COMP9024 19T3
 
-typedef struct stackObject *Stack;
+typedef struct StackRep *stack;
 
-/**
- * 创建一个栈
- * @return
- */
-Stack newStack();
-
-/**
- * 压栈
- */
-void pushStack(Stack,int);
-
-/**
- * 弹出栈
- * @return
- */
-int popStack(Stack);
-
-/**
- * 判断是否为空
- * @return
- */
-bool isEmptyStack(Stack);
-
-
-/**
- * 释放stack
- */
-void freeStack(Stack);
+stack newStack();             // set up empty stack
+void  dropStack(stack);       // remove unwanted stack
+int   StackIsEmpty(stack);    // check whether stack is empty
+void  StackPush(stack, int);  // insert an int on top of stack
+int   StackPop(stack);        // remove int from top of stack

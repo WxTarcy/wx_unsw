@@ -7,7 +7,6 @@
 
 #define  STOP_NAME 32
 #define  TIME 5
-
 #define VERY_HIGH_VALUE 999999
 
 
@@ -16,7 +15,6 @@ typedef struct schedule {
     char *time;
     int busIndex;
     int intTime;
-    //int totalNum;
 } * Schedule;
 
 Schedule createSchedule(int busIndex){
@@ -31,14 +29,14 @@ Schedule createSchedule(int busIndex){
     return newSchedule;
 }
 
-void print_track(int a[],int b,Schedule *schedules,int BusName){
-    int s=0;
-    s=BusName;
+void showLines(int a[],int b,Schedule *schedules,int BusNo){
+    int currentNo=0;
+    currentNo=BusNo;
     if(a[b]!=-1){
-        BusName=schedules[b]->busIndex;
-        print_track(a,a[b],schedules,BusName);
+        BusNo=schedules[b]->busIndex;
+        showLines(a,a[b],schedules,BusNo);
     }
-    if (s!=BusName){
+    if (currentNo!=BusNo){
         printf("%s %s\n",schedules[b]->time,schedules[b]->name);
         printf("Change at %s\n",schedules[b]->name);
     } else{
@@ -76,7 +74,7 @@ int dijkstraSSSP(Graph g, int source,Vertex end) {
 }
 
 
-void dijkstraSSSPs(Graph g, int source,Schedule *schedules,Vertex end,int busNO) {
+void dijkstraSSSPShowLine(Graph g, int source,Schedule *schedules,Vertex end,int busNO) {
     int  dist[MAX_NODES];
     int  pred[MAX_NODES];
     bool vSet[MAX_NODES];  // vSet[v] = true <=> v has not been processed
@@ -104,7 +102,7 @@ void dijkstraSSSPs(Graph g, int source,Schedule *schedules,Vertex end,int busNO)
 
         vSet[leave_point] = false;
     }
-    print_track(pred,end,schedules,busNO);
+    showLines(pred,end,schedules,busNO);
 
 }
 
@@ -131,9 +129,6 @@ int main() {
     int num_buses;
     int num_stops;
     printf("Enter the number of busses: ");
-    // 0    5
-    // 1
-    // 1    2
     if (scanf("%d", &num_buses) != 1) {
         return 0;
     }
@@ -144,7 +139,6 @@ int main() {
     for (int busIndex = 0; busIndex < num_buses; busIndex++) {
         printf("Enter the number of stops: ");
         scanf("%d", &num_stops);
-        // 总共有多少站
         totalStops +=num_stops;
         schedules = realloc(schedules, sizeof(Schedule) * totalStops);
         for(int busStopIndex =0 ;busStopIndex <num_stops;busStopIndex++) {
@@ -152,9 +146,6 @@ int main() {
             index++;
         }
     }
-//    for(index = 0; index < totalStops;index ++) {
-//        printf("%s,%s,%d,%d\n", schedules[index]->name, schedules[index]->time, schedules[index]->busIndex,schedules[index]->intTime);
-//    }
     Graph lines=newGraph(totalStops);
     for (int i = 0; i < totalStops; ++i) {
         if (i!=totalStops-1&&schedules[i]->busIndex==schedules[i+1]->busIndex){
@@ -213,31 +204,30 @@ int main() {
                 c++;
             }
         }
-        int useTime=999999,finalfrom=0,finalto=0;
+        int useTime=VERY_HIGH_VALUE,finalFrom=0,finalTo=0;
         for (int i = 0; i < totalStops; ++i) {
             for (int j = 0; j < totalStops; ++j) {
                 if (FromNum[i]!=-1 && ToNum[j]!=-1){
                     if (useTime>dijkstraSSSP(lines,FromNum[i],ToNum[j])){
                         useTime=dijkstraSSSP(lines,FromNum[i],ToNum[j]);
-                        finalfrom=FromNum[i];
-                        finalto=ToNum[j];
+                        finalFrom=FromNum[i];
+                        finalTo=ToNum[j];
                     }
 
                 }
             }
         }
-        if (useTime==999999){
+        if (useTime==VERY_HIGH_VALUE){
             printf("No connection found.\n");
         } else{
-            dijkstraSSSPs(lines,finalfrom,schedules,finalto,schedules[finalto]->busIndex);
+            dijkstraSSSPShowLine(lines,finalFrom,schedules,finalTo,schedules[finalTo]->busIndex);
         }
 
 
     }
 
 
-
-
+    //free memory
     freeGraph(lines);
     for(index = 0; index < totalStops;index ++) {
         free(schedules[index]->name);
@@ -249,9 +239,3 @@ int main() {
 
 
 
-//1200
-//c
-//1245
-//b
-//1300
-//a
