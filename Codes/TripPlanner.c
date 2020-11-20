@@ -1,3 +1,8 @@
+/*  the Complexity of showLines is  O(K)
+ *  the Complexity of dijkstraSSSP and dijkstraSSSPShowLine is same which is O()
+ *  the Complexity of Graph is O()
+ * */
+
 
 #include <string.h>
 #include <stdlib.h>
@@ -28,7 +33,8 @@ Schedule createSchedule(int busIndex){
     newSchedule->intTime=hour*60+atoi(newSchedule->time+2);
     return newSchedule;
 }
-
+//final printf time and bus station name
+//Complexity O(K)
 void showLines(int a[],int b,Schedule *schedules,int BusNo){
     int currentNo=0;
     currentNo=BusNo;
@@ -73,7 +79,6 @@ int dijkstraSSSP(Graph g, int source,Vertex end) {
     return dist[end];
 }
 
-
 void dijkstraSSSPShowLine(Graph g, int source,Schedule *schedules,Vertex end,int busNO) {
     int  dist[MAX_NODES];
     int  pred[MAX_NODES];
@@ -88,7 +93,6 @@ void dijkstraSSSPShowLine(Graph g, int source,Schedule *schedules,Vertex end,int
         vSet[s] = true;
     }
     dist[source] = 0;
-
     while (PQueueIsEmpty() == false) {
         // find  minimum distance to source point
         int leave_point = leavePQueue(dist);
@@ -124,7 +128,6 @@ int main() {
         name=malloc(sizeof(char)*STOP_NAME);
         scanf("%s",name);
     }
-
     //second part
     int num_buses;
     int num_stops;
@@ -146,8 +149,9 @@ int main() {
             index++;
         }
     }
+    //create graph
     Graph lines=newGraph(totalStops);
-    for (int i = 0; i < totalStops; ++i) {
+    for (int i = 0; i < totalStops; ++i) {//create graph in same bus line
         if (i!=totalStops-1&&schedules[i]->busIndex==schedules[i+1]->busIndex){
             Edge line;
             line.v=i;
@@ -155,7 +159,7 @@ int main() {
             line.weight=schedules[i+1]->intTime-schedules[i]->intTime;
             insertEdge(lines,line);
         }
-        for (int j = 0; j < totalStops; ++j) {
+        for (int j = 0; j < totalStops; ++j) {//create graph in different bus line
             if (strcmp(schedules[i]->name,schedules[j]->name)==0&&schedules[i]->busIndex!=schedules[j]->busIndex){
                 if (schedules[i]->intTime<schedules[j]->intTime){
                     Edge line;
@@ -182,7 +186,7 @@ int main() {
         scanf("%s",arrive_time);
         int hour=atoi(arrive_time)/100;
         int intFinalTime=hour*60+atoi(arrive_time+2);
-        int count=0;
+        int count=0;//Record the number of start stop that meet the requirements
         int FromNum[totalStops];
         for (int i = 0; i < totalStops; ++i) {
             if (strcmp(From,schedules[i]->name)==0){
@@ -194,7 +198,7 @@ int main() {
             }
         }
         int ToNum[totalStops];
-        int c=0;
+        int c=0;//Record the number of end stop that meet the requirements
         for (int j = 0; j < totalStops ;j++) {
             if (strcmp(To,schedules[j]->name)==0 && schedules[j]->intTime<=intFinalTime){
                 ToNum[c]=j;
@@ -205,7 +209,7 @@ int main() {
             }
         }
         int useTime=VERY_HIGH_VALUE,finalFrom=0,finalTo=0;
-        for (int i = 0; i < totalStops; ++i) {
+        for (int i = 0; i < totalStops; ++i) {//Use dijkstra algorithm to find the most suitable route
             for (int j = 0; j < totalStops; ++j) {
                 if (FromNum[i]!=-1 && ToNum[j]!=-1){
                     if (useTime>dijkstraSSSP(lines,FromNum[i],ToNum[j])){
@@ -217,6 +221,7 @@ int main() {
                 }
             }
         }
+        //printf part
         if (useTime==VERY_HIGH_VALUE){
             printf("No connection found.\n");
         } else{
