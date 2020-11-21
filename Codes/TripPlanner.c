@@ -43,7 +43,7 @@ void showLines(int a[],int b,Schedule *schedules,int BusNo){
         showLines(a,a[b],schedules,BusNo);
     }
     if (currentNo!=BusNo){
-        printf("%s %s",schedules[b]->time,schedules[b]->name);
+        printf("%s %s ",schedules[b]->time,schedules[b]->name);
         printf("Change at %s\n",schedules[b]->name);
     } else{
         printf("%s %s\n",schedules[b]->time,schedules[b]->name);
