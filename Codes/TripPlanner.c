@@ -1,6 +1,6 @@
-/*  the Complexity of showLines is  O(K)
- *  the Complexity of dijkstraSSSP and dijkstraSSSPShowLine is same which is O()
- *  the Complexity of Graph is O()
+/*  the Complexity of showLines is  O(mk)
+ *  the Complexity of dijkstraSSSP and dijkstraSSSPShowLine is same which is O(mklogmk)
+ *  the Complexity of Graph is O(mmkk)
  * */
 
 
@@ -43,7 +43,7 @@ void showLines(int a[],int b,Schedule *schedules,int BusNo){
         showLines(a,a[b],schedules,BusNo);
     }
     if (currentNo!=BusNo){
-        printf("%s %s\n",schedules[b]->time,schedules[b]->name);
+        printf("%s %s",schedules[b]->time,schedules[b]->name);
         printf("Change at %s\n",schedules[b]->name);
     } else{
         printf("%s %s\n",schedules[b]->time,schedules[b]->name);
