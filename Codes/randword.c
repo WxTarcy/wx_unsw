@@ -10,7 +10,7 @@ int word(int length, int seed){
     char c;
     for (int i = 0; i < length; ++i) {
         srand(seed+i);
-        aa=rand()%26;
+        aa=rand()%25;
         c=words[aa];
         printf("%c",c);
     }
