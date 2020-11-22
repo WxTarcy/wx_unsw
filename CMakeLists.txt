@@ -28,24 +28,30 @@ add_executable(COMP9024_20T2
         Codes/PQueue.h
         Codes/PQueue.c
         #Codes/TripPlaner1.c
-        Codes/TripPlanner.c Codes/Graph.h Codes/Graph.c)
+        Codes/TripPlanner.c
+        Codes/Graph.h
+        Codes/Graph.c
+        #Codes/week10.c
+        )
 
-add_executable(COMP9024_20T22
-        # Codes/test.c
-        # Codes/class.c
-        # Codes/lab01/binary.c
-        # Codes/arrat_queue.h
-        # Codes/arrat_queue.c
-        #Codes/main.c
-        #Codes/llcreate.c
-        #Codes/llsplit.c
-        #Codes/BST.c
-        #Codes/BST.h
-        #Codes/queue.c
-        #Codes/queue.h
-        #Codes/llcreate.c
-        Codes/list.h
-        Codes/list.c)
+#add_executable(COMP9024_20T22
+#        # Codes/test.c
+#        # Codes/class.c
+#        # Codes/lab01/binary.c
+#        # Codes/arrat_queue.h
+#        # Codes/arrat_queue.c
+#        #Codes/main.c
+#        #Codes/llcreate.c
+#        #Codes/llsplit.c
+#        #Codes/BST.c
+#        #Codes/BST.h
+#        #Codes/queue.c
+#        #Codes/queue.h
+#        #Codes/llcreate.c
+#        #Codes/list.h
+#        #Codes/list.c
+#        #Codes/week10.c
+#        )
 
 add_executable(stackandlist
         #Codes/list.c
@@ -60,6 +66,9 @@ add_executable(stackandlist
 #        Codes/WGraph.c
 #        Codes/WGraph.h
         #Codes/midterm.c
-        Codes/PQueue.h
-        Codes/PQueue.c
-        Codes/dijkstra.c)
+#        Codes/PQueue.h
+#        Codes/PQueue.c
+        #Codes/dijkstra.c
+#        Codes/week9.c
+        Codes/randword.c
+        )

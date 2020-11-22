@@ -8,12 +8,14 @@ int word(int length, int seed){
            'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','\0'};
     int aa=0;
     char c;
+    char w[length];
     for (int i = 0; i < length; ++i) {
         srand(seed+i);
         aa=rand()%25;
         c=words[aa];
-        printf("%c",c);
+        w[i]=c;
     }
+    printf("%s",w);
     return 0;
 }
 
