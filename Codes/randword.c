@@ -4,16 +4,15 @@
 #include <time.h>
 
 
-int word(int length, int seed){
+void word(int length, int seed){
     char words[27]={'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
            'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','\0'};
     char w[length];
-    srand(time(NULL));
+    srand(seed);
     for (int i = 0; i < length; ++i) {
         w[i]=words[rand()%26];
     }
     printf("%s",w);
-    return 0;
 }
 
 int main(){
