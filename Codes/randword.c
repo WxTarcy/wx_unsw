@@ -16,7 +16,6 @@ int word(int length, int seed){
 }
 
 int main(){
-    printf("输入：");
     int a,b;
     scanf("%d",&a);
     scanf("%d",&b);
