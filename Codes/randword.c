@@ -8,7 +8,6 @@ int word(int length, int seed){
            'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','\0'};
     char w[length];
     for (int i = 0; i < length; ++i) {
-        srand(seed+i);
         w[i]=words[rand()%25];
     }
     printf("%s",w);
