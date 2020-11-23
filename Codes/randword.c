@@ -1,25 +1,14 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
+#define BEGIN  97  // ASCII of 'a'
 
-
-void word(int length, int seed){
-    char words[27]={'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
-           'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','\0'};
-    char w[length];
+int main(int argc, char *argv[]) {
+    int length = atoi(argv[1]);
+    int seed = atoi(argv[2]);
     srand(seed);
-    for (int i = 0; i < length; ++i) {
-        w[i]=words[rand()%26];
+    for (int i = 0; i < length; i++){
+        printf("%c", (rand() % 26 + BEGIN));
     }
-    printf("%s",w);
-}
-
-int main(){
-    int a,b;
-    scanf("%d",&a);
-    scanf("%d",&b);
-    word(a,b);
     return 0;
-
 }
